@@ -1,0 +1,21 @@
+
+{
+    "item1":
+        {"title":"Elixir Vitalis",
+        "itemtype":"Potion",
+        "description":"Lorem Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "stock":23
+        },
+    "item2":
+        {"title":"Lighting Maker",
+        "itemtype":"Staff",
+        "description":"Lorem ipsum dolor sit amet,consectetur adipiscing elit.",
+        "stock":3
+        },
+    "item3":
+        {"title":"Invisibility Cloak",
+        "itemtype":"Cloak",
+        "description":"Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "stock":1
+        } 
+}

@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+@font-face{
+  font-family: 'pixel art';
+  src: url(./assets/fonts/VT323-Regular.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes tada {
   from {
-    transform: rotate(0deg);
+    transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: scale3d(1, 1, 1);
   }
+}
+.tada {
+  animation-name: tada;
+  animation-duration:2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count:infinite;
+  animation-delay: 2s;
+}
+
+
+.App {
+  background-color: #282c34;
+  
 }
