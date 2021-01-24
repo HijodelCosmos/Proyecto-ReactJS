@@ -1,7 +1,8 @@
 import React from "react";
 import ItemCounter from "./itemCounter"
+import foto from '../../assets/img/items/staff.png'
 
-const ItemCard=({title,itemtype,description,stock})=>{
+const ItemCard=({title,itemtype,description,stock,src})=>{
 
 
     return(
@@ -9,8 +10,8 @@ const ItemCard=({title,itemtype,description,stock})=>{
             <div className="card-body text-center">
                 <h4 className="card-title ">{title}</h4>
                 <h6 className="card-subtitle mb-2 text-muted">{itemtype}</h6>
+                <img src="/img/items/elixir.png" className="m-3" width="100"></img>
                 <p className="card-text">{description}</p>
-
             </div>
             <div className="card-footer">
                 <ItemCounter stock={stock}></ItemCounter>
