@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ItemData from "../../db/itemListDB.json"
 import ItemDetail from '../item/itemDetail';
+import './itemDetailContainer.css'
 
 const ItemDetailContainer = ()=>{
 
@@ -16,6 +17,7 @@ const ItemDetailContainer = ()=>{
             },2000)
         })
         getItem.then(response =>{
+            //harcodeo un item cualquiera de mi json
             setItem(response.item1)
     
         }, err=>{
@@ -25,9 +27,7 @@ const ItemDetailContainer = ()=>{
     console.log(item)
 
     return (
-        <div className="container justify-content-center m-4">
-            <h1 style={{color:"white"}}>pantalla de Item</h1>
-            <h2 style={{color:"white"}}>{item && item.title}</h2>
+        <div id="itemDetail" className="container justify-content-center">
             <ItemDetail itemData={item}></ItemDetail>
 
         </div>
