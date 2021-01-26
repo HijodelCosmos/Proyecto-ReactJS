@@ -1,24 +1,30 @@
 
 {
     "item1":
-        {"title":"Elixir Vitalis",
+        {"id":0,
+        "title":"Elixir Vitalis",
         "itemtype":"Potion",
         "description":"Lorem Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "stock":23,
+        "price":24,
         "src":"/img/items/elixir.png"
         },
     "item2":
-        {"title":"Lighting Maker",
+        {"id":1,
+        "title":"Lighting Maker",
         "itemtype":"Staff",
         "description":"Lorem ipsum dolor sit amet,consectetur adipiscing elit.",
         "stock":3,
+        "price":321,
         "src":"../../assets/img/items/staff.png"
         },
     "item3":
-        {"title":"Invisibility Cloak",
+        {"id":2,
+            "title":"Invisibility Cloak",
         "itemtype":"Cloak",
         "description":"Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "stock":1,
+        "price":754,
         "src":"../../assets/img/items/cloak.png"
         } 
 }

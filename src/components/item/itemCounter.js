@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 
-const ItemCounter = ({stock})=>{
+const ItemCounter = ({itemData})=>{
 
+    const stock = itemData && itemData.stock
     //Si le pasan un true al atributo Disabled, el boton se desabilita
     const [btnRmvState, setBtnRmvState] = useState(false)
     const [btnAddState, setBtnAddState] = useState(false)
