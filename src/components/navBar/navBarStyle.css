@@ -11,7 +11,7 @@
     padding: 0;
     margin: 0;
 }
-#navBar--menu li{
+#navBar--menu .navBar--item{
     font-size: 2rem;
     padding: 10px;
     display: inline;
@@ -19,4 +19,35 @@
 }
 #navBar--menu a, a:hover, a:visited{
     color: white;
+}
+
+
+/*Deploy menu*/
+.deploy_trigger{
+    position: relative;
+}
+.deploy_menu{
+    background-color: #1c2536;
+    height: auto;
+    width: auto;
+    padding-top: 5px;
+    padding:15px;
+    z-index: 1000;
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    border-radius: 5px;}
+    
+.deploy_menu li{
+    display: block;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.deploy_menu li a:hover{
+    border-right: none;
+}
+.deploy_trigger:hover .deploy_menu{
+        display:block;
 }

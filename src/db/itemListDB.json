@@ -3,28 +3,28 @@
     "item1":
         {"id":0,
         "title":"Elixir Vitalis",
-        "itemtype":"Potion",
+        "category":"Potion",
         "description":"Lorem Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "stock":23,
         "price":24,
-        "src":"/img/items/elixir.png"
+        "src":"https://www.kindpng.com/picc/m/748-7482560_potion-pixel-art-animation-hd-png-download.png"
         },
     "item2":
         {"id":1,
         "title":"Lighting Maker",
-        "itemtype":"Staff",
+        "category":"Staff",
         "description":"Lorem ipsum dolor sit amet,consectetur adipiscing elit.",
         "stock":3,
         "price":321,
-        "src":"../../assets/img/items/staff.png"
+        "src":"https://lh3.googleusercontent.com/proxy/Bp5PAIBpmUW3WBOKH_hMEiSOrfRv8FRDCfDXxdIWi5i3l0LsiHZ6AQtXAWTEyDA-P16FndD__KTgnD9xDqlL3XzUJUKKGaLV"
         },
     "item3":
         {"id":2,
             "title":"Invisibility Cloak",
-        "itemtype":"Cloak",
+        "category":"Cloak",
         "description":"Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "stock":1,
         "price":754,
-        "src":"../../assets/img/items/cloak.png"
+        "src":"https://www.kindpng.com/picc/m/486-4867002_transparent-robe-png-wizard-pixel-art-png-download.png"
         } 
 }

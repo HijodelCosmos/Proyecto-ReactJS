@@ -6,6 +6,7 @@ const ItemCounter = ({itemData})=>{
     //Si le pasan un true al atributo Disabled, el boton se desabilita
     const [btnRmvState, setBtnRmvState] = useState(false)
     const [btnAddState, setBtnAddState] = useState(false)
+    const [btnCartState,setBtnCartState] = useState(false)
 
     const [stockLeft, setStockLeft] = useState(stock)
     const [cartCount,setCartCount] = useState(0)
@@ -21,6 +22,8 @@ const ItemCounter = ({itemData})=>{
 
         setStockLeft(stock-cartCount);
 
+        
+
         (cartCount >= stock)?
         setBtnAddState(true)
         : setBtnAddState(false);
@@ -28,6 +31,10 @@ const ItemCounter = ({itemData})=>{
         (cartCount <= 0)?
         setBtnRmvState(true)
         : setBtnRmvState(false);
+
+        (cartCount <= 0)?
+        setBtnCartState(true)
+        : setBtnCartState(false);
     },[cartCount])
 
     return(
@@ -43,7 +50,7 @@ const ItemCounter = ({itemData})=>{
                 </button>
             </div>
             <div className="row justify-content-center">
-                <button type="button" className="btn btn-primary m-1 ">Add to Cart</button>
+                <button type="button" className="btn btn-primary m-1 " disabled={btnCartState}>Add to Cart</button>
             </div>
         </React.Fragment>
     )
