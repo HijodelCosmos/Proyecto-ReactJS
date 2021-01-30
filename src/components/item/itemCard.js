@@ -5,7 +5,9 @@ import ItemCounter from "./itemCounter"
 
 
 const ItemCard=({itemData})=>{
-
+    const doSomething = ()=>{
+        console.log("este boton todavia no eta configurado")
+        };
 
     return(
         <div className="card col-12 col-md-4 col-lg-3 mt-5 m-2 rounded-lg">
@@ -20,7 +22,7 @@ const ItemCard=({itemData})=>{
                 <Link to={`/item:${itemData["id"]}`}><button type="button" className="btn btn-primary ">More Info</button></Link>
             </div>
             <div className="card-footer">
-                <ItemCounter itemData={itemData}></ItemCounter>
+                <ItemCounter itemData={itemData} handlerClick={doSomething}></ItemCounter>
             </div>
         </div>
     )

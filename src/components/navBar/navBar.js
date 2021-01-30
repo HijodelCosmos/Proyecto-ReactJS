@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import './navBarStyle.css';
 import Cart from'../cartWidget/cartWidget'
 import logo from '../../assets/img/logo.png';
+//import { CartContext } from '../../context/cartContext'
 
 
 export const NavBar = () => {

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 
-const ItemCounter = ({itemData})=>{
+const ItemCounter = ({itemData, handlerClick})=>{
+    
 
     const stock = itemData && itemData.stock
     //Si le pasan un true al atributo Disabled, el boton se desabilita
@@ -50,7 +51,7 @@ const ItemCounter = ({itemData})=>{
                 </button>
             </div>
             <div className="row justify-content-center">
-                <button type="button" className="btn btn-primary m-1 " disabled={btnCartState}>Add to Cart</button>
+                <button onClick={()=>handlerClick(cartCount)} type="button" className="btn btn-primary m-1 " disabled={btnCartState}>Add to Cart</button>
             </div>
         </React.Fragment>
     )
