@@ -5,7 +5,6 @@ import ItemCard from './itemCard';
 
 const ItemList = ({data})=>{
 
-    console.log(data)
 
     return(
         <React.Fragment>

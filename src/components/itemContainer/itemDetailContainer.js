@@ -28,7 +28,6 @@ const ItemDetailContainer = ()=>{
             console.log(err)
         })
     },[])
-    console.log(item)
 
     return (
         <div id="itemDetail" className="container justify-content-center">

@@ -1,16 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route , Redirect } from "react-router-dom";
 //Components
 import {NavBar} from './components/navBar/navBar'
 import './App.css';
 import ItemListContainer from './components/itemContainer/itemListContainer';
 import ItemDetailContainer from './components/itemContainer/itemDetailContainer'
 //Context
-import { CartContext } from './context/cartContext'
+import { CartContextProvider } from './context/cartContext'
 //Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 
 function App() {
 
@@ -18,12 +16,15 @@ function App() {
 
       <div className="App">
         <BrowserRouter> 
-          <CartContext.Provider value={0}>
+          <CartContextProvider>
           <NavBar/>
+          <Redirect
+            from="/Proyecto-ReactJS/"
+            to="/" />
           <Switch>
             <React.Fragment>
             <main className="container">
-              <Route exact path='/Proyecto-ReactJS/'>
+              <Route exact path='/'>
                 <ItemListContainer/>
               </Route>  
               <Route exact path='/category:categoryId'>
@@ -35,7 +36,7 @@ function App() {
             </main>
             </React.Fragment>
           </Switch>
-          </CartContext.Provider>
+          </CartContextProvider>
         </BrowserRouter>
       </div>
   );

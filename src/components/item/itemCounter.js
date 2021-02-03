@@ -51,7 +51,7 @@ const ItemCounter = ({itemData, handlerClick})=>{
                 </button>
             </div>
             <div className="row justify-content-center">
-                <button onClick={()=>handlerClick(cartCount)} type="button" className="btn btn-primary m-1 " disabled={btnCartState}>Add to Cart</button>
+                <button onClick={()=>handlerClick(itemData,cartCount)} type="button" className="btn btn-primary m-1 " disabled={btnCartState}>Add to Cart</button>
             </div>
         </React.Fragment>
     )
