@@ -11,7 +11,8 @@ const ItemList = ({data})=>{
             {data && data.map((item,i)=>{
                     return(
                         <ItemCard key={i} itemData={item}/>)
-                    })}
+                    })
+            }
         </React.Fragment>
     )
 }

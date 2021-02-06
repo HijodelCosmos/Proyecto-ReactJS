@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 import ItemCounter from "./itemCounter";
-import PurchaseButton from '../button/purchaseButton'
-import { Link } from "react-router-dom";
-import { CartContext }from '../../context/cartContext'
+import PurchaseButton from '../buttons/purchaseButton'
+import { Store }from '../../context/cartContext';
+import coinLogo from '../../assets/img/dollar.png';
 
 const ItemDetail = ({itemData})=>{
 
-    const {isInCart , addItem , removeItem }= useContext(CartContext);
+    const {isInCart , addItem , removeItem }= useContext(Store);
   
     return( 
 
         itemData && 
-            <React.Fragment>
+            <div className="container">
                 <div className="row justify-content-center">
                 <h1 className="mt-4">{itemData.title}</h1>
                 </div>
@@ -21,20 +21,22 @@ const ItemDetail = ({itemData})=>{
                         <h3>{itemData["title"]}</h3>
                         <h4 className="text-muted">{itemData.category}</h4>
                         <p>{itemData.description}</p>
-                        <h3 className="text-center">$ {itemData.price}</h3>      
+                        <h3 className="text-center">
+                            <img src={coinLogo} width="32" alt="Coin Logo"></img> {itemData.price}
+                        </h3>      
                         
                         <button onClick={()=>removeItem(itemData.id)} type="button" className="btn btn-danger m-1 ">Delete Items</button>
                         <button onClick={()=>isInCart(itemData.id)} type="button" className="btn btn-warning m-1 ">Is in cart?</button>
 
                         {isInCart(itemData.id)?
-                            <Link to='/cart'><PurchaseButton></PurchaseButton></Link>
+                            <PurchaseButton></PurchaseButton>
                             :
                             <ItemCounter  itemData={itemData} handlerClick={addItem}></ItemCounter>                                                         
                         }
                             
                     </div>               
                 </div>           
-            </React.Fragment>
+            </div>
         
     )
 }

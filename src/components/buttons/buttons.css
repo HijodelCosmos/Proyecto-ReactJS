@@ -1,0 +1,14 @@
+.purchaseButton{
+    font-size: 1.6rem;
+}
+
+.countersButtons{
+    font-family: 'pixel art';
+    line-height: initial;
+    font-size: 2.7rem;
+    background: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}

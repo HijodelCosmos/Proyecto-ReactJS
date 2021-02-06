@@ -20,7 +20,6 @@ export const NavBar = () => {
                         <ul id="navBar--menu">
                             <li className="navBar--item"><Link to='/' href="./#home">Home</Link></li>
                             <li className="navBar--item"><a href="./#support">About Us</a></li>
-
                             <li className="navBar--item deploy_trigger">
                             Categories
                                 <ul className="deploy_menu">
@@ -32,7 +31,9 @@ export const NavBar = () => {
                         </ul>
                     </div>
                     <div className=" col-2">
-                        <CartWidget/>
+                        <Link to='/cart'>
+                            <CartWidget/>
+                        </Link>
                     </div>
                 </div>
             </nav>

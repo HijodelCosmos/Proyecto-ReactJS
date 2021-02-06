@@ -10,8 +10,7 @@ const ItemDetailContainer = ()=>{
     const { itemId } = useParams(); //Capturo el id del objeto atravez del prop del router
 
     useEffect(()=>{
-
-        
+       
         const getItem = new Promise ((res,rej)=>{
             setTimeout(()=>{
                 let getDB = Object.values(ItemData);
@@ -21,7 +20,7 @@ const ItemDetailContainer = ()=>{
         getItem.then(response =>{
             //por use State objetengo un string con : delante de mi id, asi que lo quito con subtr
             let id = itemId.substr(1,1)
-            //uso el id obtenido para obicar el item de mi json convertido actualmente a un array
+            //uso el id obtenido para ubicar el item de mi json convertido actualmente a un array
             setItem(response[id])
     
         }, err=>{

@@ -1,0 +1,29 @@
+#cart{
+    color: white;
+}
+#cart--title{
+    font-family: 'pixel art';
+    font-size: 3.6rem;
+}
+
+#cart table{
+    color: white;
+    font-size: 1.4rem;
+    vertical-align: middle;
+}
+#cart table td{
+    vertical-align: middle;
+}
+.category--description{
+    color: silver;
+}
+
+#cart--totalPrice{
+    font-family: 'pixel art';
+    font-size: 3rem;
+}
+#cart--clearButton{
+    font-family: 'pixel art';
+    font-size: 2rem;
+    border-radius: 10px;
+}
