@@ -12,11 +12,11 @@ const ItemCard=({itemData})=>{
     const {isInCart , addItem }= useContext(Store);
 
     return(
-        <div className="card col-12 col-md-4 col-lg-3 mt-5 m-2 rounded-lg">
+        <div className="card col-12 col-sm-10 col-md-12 col-lg-4  mt-5 rounded-lg">
             <div className="card-body text-center">
                 <h3 className="card-title ">{itemData["title"]}</h3>
                 <h6 className="card-subtitle mb-2 text-muted">{itemData["category"]}</h6>
-                <img src={itemData["src"]} className="m-3" width="150" alt="Descripcion de producto"></img>
+                <img src={itemData["src"]} className="m-2 img-fluid" width="150" alt="Descripcion de producto"></img>
                 <p className="card-text">{itemData["description"]}</p>
             </div>
             <div className="text-center mb-2">

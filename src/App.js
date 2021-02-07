@@ -3,8 +3,9 @@ import { BrowserRouter, Switch, Route , Redirect } from "react-router-dom";
 //Components
 import {NavBar} from './components/navBar/navBar';
 import './App.css';
-import ItemListContainer from './components/itemContainer/itemListContainer';
-import ItemDetailContainer from './components/itemContainer/itemDetailContainer';
+import ItemListContainer from './components/Containers/itemListContainer';
+import ItemDetailContainer from './components/Containers/itemDetailContainer';
+import ItemCategoryContainer from './components/Containers/itemCategoryContainer';
 import Cart from './components/cart/cart';
 //Context
 import { CartContextProvider } from './context/cartContext';
@@ -24,12 +25,12 @@ function App() {
             to="/" />
           <Switch>
             <React.Fragment>
-            <main className="container">
+            
               <Route exact path='/'>
                 <ItemListContainer/>
               </Route>  
               <Route exact path='/category:categoryId'>
-                <ItemListContainer/>
+                <ItemCategoryContainer/>
               </Route>   
               <Route path='/item:itemId'>
                 <ItemDetailContainer/>
@@ -37,7 +38,7 @@ function App() {
               <Route path='/cart'>
                 <Cart></Cart>
               </Route>         
-            </main>
+            
             </React.Fragment>
           </Switch>
           </CartContextProvider>

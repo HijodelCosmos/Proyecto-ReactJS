@@ -12,10 +12,10 @@ export const CartContextProvider = ({children})=>{
     const isInCart = (itemId)=>{
         let itemExist = itemsInCart.find(item => item["id"]=== itemId);
 
-        itemExist?
+        /*itemExist?
         console.log("El item esta en el carrito")
         :
-        console.log("El item no esta en el carrito");
+        console.log("El item no esta en el carrito");*/
         console.log(totalPrice)
         return(itemExist?true:false);
     }

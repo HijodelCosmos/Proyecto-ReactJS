@@ -7,13 +7,13 @@ const ItemList = ({data})=>{
 
 
     return(
-        <React.Fragment>
+        <div className="card-deck justify-content-around">
             {data && data.map((item,i)=>{
                     return(
                         <ItemCard key={i} itemData={item}/>)
                     })
             }
-        </React.Fragment>
+        </div>
     )
 }
 

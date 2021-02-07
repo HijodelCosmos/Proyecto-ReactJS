@@ -1,6 +1,7 @@
 #cart{
     color: white;
 }
+
 #cart--title{
     font-family: 'pixel art';
     font-size: 3.6rem;
@@ -9,10 +10,12 @@
 #cart table{
     color: white;
     font-size: 1.4rem;
-    vertical-align: middle;
 }
 #cart table td{
     vertical-align: middle;
+}
+#cart a, a:hover, a:visited{
+    color: white;
 }
 .category--description{
     color: silver;
