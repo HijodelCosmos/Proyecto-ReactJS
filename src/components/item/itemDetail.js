@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 import ItemCounter from "./itemCounter";
 import PurchaseButton from '../buttons/purchaseButton'
-import { Store }from '../../context/cartContext';
+import { CartContext }from '../../context/cartContext';
 import coinLogo from '../../assets/img/dollar.png';
 
 const ItemDetail = ({itemData})=>{
 
-    const {isInCart , addItem , removeItem }= useContext(Store);
+    const {isInCart , addItem }= useContext(CartContext);
   
     return( 
 
         itemData && 
-            <div className="container">
+            <>
                 <div className="row justify-content-center">
                 <h1 className="mt-4">{itemData.title}</h1>
                 </div>
@@ -25,18 +25,15 @@ const ItemDetail = ({itemData})=>{
                             <img src={coinLogo} width="32" alt="Coin Logo"></img> {itemData.price}
                         </h3>      
                         
-                        <button onClick={()=>removeItem(itemData.id)} type="button" className="btn btn-danger m-1 ">Delete Items</button>
-                        <button onClick={()=>isInCart(itemData.id)} type="button" className="btn btn-warning m-1 ">Is in cart?</button>
-
                         {isInCart(itemData.id)?
                             <PurchaseButton></PurchaseButton>
                             :
-                            <ItemCounter  itemData={itemData} handlerClick={addItem}></ItemCounter>                                                         
+                            <ItemCounter itemData={itemData} handlerClick={addItem}></ItemCounter>                                                         
                         }
                             
                     </div>               
                 </div>           
-            </div>
+            </>
         
     )
 }

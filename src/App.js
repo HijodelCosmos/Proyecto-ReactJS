@@ -9,6 +9,7 @@ import ItemCategoryContainer from './components/Containers/itemCategoryContainer
 import Cart from './components/cart/cart';
 //Context
 import { CartContextProvider } from './context/cartContext';
+import { OrderContextProvider } from './context/order'
 //Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -18,30 +19,33 @@ function App() {
 
       <div className="App">
         <BrowserRouter> 
-          <CartContextProvider>
-          <NavBar/>
-          <Redirect
-            from="/Proyecto-ReactJS/"
-            to="/" />
-          <Switch>
-            <React.Fragment>
+          <OrderContextProvider>
+            <CartContextProvider>            
+              <NavBar/>
+              <Redirect
+                from="/Proyecto-ReactJS/"
+                to="/" />
+              <Switch>
+                <React.Fragment>
+                
+                  <Route exact path='/'>
+                    <ItemListContainer/>
+                  </Route>  
+                  <Route exact path='/category:categoryId'>
+                    <ItemCategoryContainer/>
+                  </Route>   
+                  <Route path='/item:itemId'>
+                    <ItemDetailContainer/>
+                  </Route>
+                  <Route path='/cart'>
+                    <Cart></Cart>
+                  </Route>         
+                
+                </React.Fragment>
+              </Switch>
             
-              <Route exact path='/'>
-                <ItemListContainer/>
-              </Route>  
-              <Route exact path='/category:categoryId'>
-                <ItemCategoryContainer/>
-              </Route>   
-              <Route path='/item:itemId'>
-                <ItemDetailContainer/>
-              </Route>
-              <Route path='/cart'>
-                <Cart></Cart>
-              </Route>         
-            
-            </React.Fragment>
-          </Switch>
-          </CartContextProvider>
+            </CartContextProvider>
+          </OrderContextProvider>
         </BrowserRouter>
       </div>
   );

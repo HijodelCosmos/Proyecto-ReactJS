@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-export const Store = React.createContext()
+export const CartContext = React.createContext()
 
 
 export const CartContextProvider = ({children})=>{
 
-    const [count , setCount] = useState(0)
+    const [count , setCount] = useState(0);
     const [itemsInCart, setItemsInCart] = useState([]);
-    const [totalPrice , setTotalPrice] = useState(0)
+    const [totalPrice , setTotalPrice] = useState(0);
 
     const isInCart = (itemId)=>{
         let itemExist = itemsInCart.find(item => item["id"]=== itemId);
@@ -16,7 +16,6 @@ export const CartContextProvider = ({children})=>{
         console.log("El item esta en el carrito")
         :
         console.log("El item no esta en el carrito");*/
-        console.log(totalPrice)
         return(itemExist?true:false);
     }
 
@@ -71,9 +70,9 @@ export const CartContextProvider = ({children})=>{
     }
         
     return(
-        <Store.Provider value={{count , itemsInCart, totalPrice , addItem , isInCart , removeItem , clearCart}}>
+        <CartContext.Provider value={{count , itemsInCart, totalPrice , addItem , isInCart , removeItem , clearCart}}>
             {children}
-        </Store.Provider>
+        </CartContext.Provider>
     )
 }
 

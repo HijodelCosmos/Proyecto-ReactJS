@@ -24,10 +24,11 @@ const ItemDetailContainer = ()=>{
                 let itemDb = {id: doc.id, ...doc.data()}
                 setItem(itemDb)
             })
+            .catch((e)=>{ console.log("Ocurrio un error: "+e)})
     },[])
 
     return (
-        <div id="itemDetail" className="container justify-content-center">
+        <div id="itemDetail" className="container justify-content-center mt-4">
             <ItemDetail itemData={item}></ItemDetail>
 
         </div>

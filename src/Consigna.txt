@@ -1,8 +1,18 @@
->> Consigna:
-    Conecta tu nueva ItemCollection de google Firestore a tu ItemListContainer y ItemDetailContainer
+CONTROL F2 MULTICURSOR
+
+Por Agregar:
+    vision de orden en tramite
+    contex order
+    form user
+    Loaders
+    Markdowns
+    .env
+
+Manejar stocks (ver clase firebase II min: 1:58:00)cart linea 44 (por ahora si no busca dentro de updateStock)
+
+>> Consigna: Conecta Firestore a tu APP para escrituras.
 
 >>Aspectos a incluir en el entregable:
-    Conecta tu colección de firestore con el listado de ítems y con el detalle de ítem
-    Elimina los async mocks (promises) y reemplazalos por los llamados de firestore
-    Si navegas a /item/:id debe ocurrir una consulta de (1) documento. 
-    Si navegas al catálogo debes consultar (N) documentos con un query filtrado, implementando la lógica de categorías y obteniendo el id de categoría del parámetro de react-router :categoryId
+
+Utiliza las operaciones de inserción para insertar tu orden en la colección y dale al user su id de orden auto-generada
+Crea los mappings para poder grabar un objeto del formato { buyer: { name, phone, email }, items: [{id, title, price}], date, total  }

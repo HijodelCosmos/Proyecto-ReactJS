@@ -6,7 +6,7 @@ const PurchaseButton = ()=>{
     return(
         <Link to='/cart'>
         <div className="d-flex justify-content-center">  
-                <button type="button" className="purchaseButton btn btn-success text-center mt-4">Complete Purchase!</button>
+                <button type="button" className="purchaseButton btn btn-success btn-lg text-center mt-4">Complete Purchase!</button>
         </div>
         </Link>
     )
