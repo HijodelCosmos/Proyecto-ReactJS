@@ -6,10 +6,11 @@ import './App.css';
 import ItemListContainer from './components/Containers/itemListContainer';
 import ItemDetailContainer from './components/Containers/itemDetailContainer';
 import ItemCategoryContainer from './components/Containers/itemCategoryContainer';
-import Cart from './components/cart/cart';
+import Cart from './components/cart/Cart';
+import Orders from './components/orders/Orders'
 //Context
 import { CartContextProvider } from './context/cartContext';
-import { OrderContextProvider } from './context/order'
+import { OrderContextProvider } from './context/orderContext'
 //Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -19,8 +20,8 @@ function App() {
 
       <div className="App">
         <BrowserRouter> 
-          <OrderContextProvider>
-            <CartContextProvider>            
+          <CartContextProvider>
+            <OrderContextProvider>
               <NavBar/>
               <Redirect
                 from="/Proyecto-ReactJS/"
@@ -40,12 +41,14 @@ function App() {
                   <Route path='/cart'>
                     <Cart></Cart>
                   </Route>         
-                
+                  <Route path='/Orders'>
+                    <Orders></Orders>
+                  </Route>  
+
                 </React.Fragment>
               </Switch>
-            
-            </CartContextProvider>
-          </OrderContextProvider>
+            </OrderContextProvider>
+          </CartContextProvider>
         </BrowserRouter>
       </div>
   );

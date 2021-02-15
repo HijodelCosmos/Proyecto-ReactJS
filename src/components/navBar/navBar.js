@@ -19,7 +19,7 @@ export const NavBar = () => {
                     <div className="col-5">
                         <ul id="navBar--menu">
                             <li className="navBar--item"><Link to='/' href="./#home">Home</Link></li>
-                            <li className="navBar--item"><a href="./#support">About Us</a></li>
+                            <li className="navBar--item"><Link to='/Orders'>Orders</Link></li>
                             <li className="navBar--item deploy_trigger">
                             Categories
                                 <ul className="deploy_menu">

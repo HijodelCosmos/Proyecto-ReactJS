@@ -1,8 +1,8 @@
-CONTROL F2 MULTICURSOR
+
 
 Por Agregar:
     vision de orden en tramite
-    contex order
+    contex order (X)
     form user
     Loaders
     Markdowns
@@ -16,3 +16,6 @@ Manejar stocks (ver clase firebase II min: 1:58:00)cart linea 44 (por ahora si n
 
 Utiliza las operaciones de inserción para insertar tu orden en la colección y dale al user su id de orden auto-generada
 Crea los mappings para poder grabar un objeto del formato { buyer: { name, phone, email }, items: [{id, title, price}], date, total  }
+
+Tips
+    CONTROL F2 MULTICURSOR
