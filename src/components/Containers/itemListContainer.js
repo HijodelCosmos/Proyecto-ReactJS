@@ -1,17 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import ItemList from '../item/itemList';
-import { useParams } from 'react-router-dom';
 import { getFireStore } from '../../firebase/index';
+import Loader from '../Loader/loader'
 
 
 const ItemListContainer= ()=>{
 
     const [db,setDb]= useState(null)
-    
-    useEffect(()=>{
+    const [loading , setLoading] = useState(false)
 
+    useEffect(()=>{
+        setLoading(true)
         let getDb = getFireStore();
-        let itemsDb = getDb.collection("items")
+        let itemsDb = getDb.collection("items");
         itemsDb.get()
             .then((querySnapshot)=>{
                 querySnapshot.size === 0 && console.log("No results");
@@ -23,16 +24,22 @@ const ItemListContainer= ()=>{
                     )
                 })
                 setDb(arrayItems)
-
+                setTimeout(() => {
+                    setLoading(false)
+                }, 600)
             })
             
+        return()=>clearTimeout()
     },[])
 
 
     return(
+        <React.Fragment>
+        <Loader loaderState={loading} ></Loader>
         <div className="container">
             <ItemList data={db}></ItemList>
         </div>
+        </React.Fragment>
     )
 }
 export default ItemListContainer

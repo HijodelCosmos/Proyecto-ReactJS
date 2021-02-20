@@ -1,3 +1,6 @@
+#orders{
+    z-index: 20;
+}
 #orders table{
     color: white;
     font-size: 1.4rem;

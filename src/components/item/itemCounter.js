@@ -21,9 +21,7 @@ const ItemCounter = ({itemData, handlerClick})=>{
 
     useEffect(()=>{
 
-        setStockLeft(stock-cartCount);
-
-        
+        setStockLeft(stock-cartCount);       
 
         (cartCount >= stock)?
         setBtnAddState(true)

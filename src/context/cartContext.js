@@ -11,7 +11,6 @@ export const CartContextProvider = ({children})=>{
 
     const isInCart = (itemId)=>{
         let itemExist = itemsInCart.find(item => item["id"]=== itemId);
-
         /*itemExist?
         console.log("El item esta en el carrito")
         :
@@ -37,14 +36,13 @@ export const CartContextProvider = ({children})=>{
         //Si el item esta en el carro, lo filtra
         if(itemIndex !== -1){
             
-            let prueba = itemsInCart.map((item)=>{
+            let uptdatedItem = itemsInCart.map((item)=>{
                     if (item===itemToDelete){
                         item["cartcount"]=item["cartcount"]-trashCount;
                     }
                 return item
             })
-            setItemsInCart(prueba)
-            console.log(prueba)
+            setItemsInCart(uptdatedItem)
 
     
             //Modifica el counter y el precio total de la compra

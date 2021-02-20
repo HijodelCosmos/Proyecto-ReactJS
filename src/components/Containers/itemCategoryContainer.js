@@ -2,17 +2,20 @@ import React, {useState, useEffect} from 'react';
 import ItemList from '../item/itemList';
 import { useParams } from 'react-router-dom';
 import { getFireStore } from '../../firebase/index';
+import Loader from '../Loader/loader';
 
 
 const ItemCategoryContainer= ()=>{
 
     const {categoryId} = useParams();
 
-    const [db,setDb]= useState(null)
+    const [db,setDb] = useState(null)
+    const [loading , setLoading]=useState(false)
     
     useEffect(()=>{
-        let category = categoryId.substr(1)
+        setLoading(true)
 
+        let category = categoryId.substr(1)
         let getDb = getFireStore();
         let itemsDb = getDb.collection("items")
         let itemsByCategory = itemsDb.where('category','==',category).limit(3)
@@ -26,6 +29,9 @@ const ItemCategoryContainer= ()=>{
                         ...doc.data()}
                     )
                 })
+                setTimeout(() => {
+                    setLoading(false)
+                }, 500)
                 setDb(arrayItems)
             })
             
@@ -34,6 +40,7 @@ const ItemCategoryContainer= ()=>{
 
     return(
         <div className="container">
+            <Loader loaderState={loading}></Loader>
             <ItemList data={db}></ItemList>
         </div>
     )

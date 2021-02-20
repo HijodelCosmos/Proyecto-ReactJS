@@ -13,7 +13,7 @@ const ItemDetail = ({itemData})=>{
         itemData && 
             <>
                 <div className="row justify-content-center">
-                <h1 className="mt-4">{itemData.title}</h1>
+                    <h1 className="mt-4">{itemData.title}</h1>
                 </div>
                 <div className="row justify-content-between p-2">
                     <img src={itemData.src} className="m-2 col-5" width="100" alt="Descripcion de producto"></img>

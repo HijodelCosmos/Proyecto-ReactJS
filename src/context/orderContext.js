@@ -11,12 +11,14 @@ export const OrderContext = React.createContext()
 export const OrderContextProvider = ({children})=>{
 
     const { itemsInCart , clearCart , totalPrice } = useContext(CartContext)
-    const [userData , setUserData] = useState({userName:"Comprador",phone:32154896,email:"compratuti@elmail"});
+    const [userData ] = useState({userName:"Comprador",phone:32154896,email:"compratuti@elmail"});
     const [ordersSended , setOrdersSended] = useState([]);
+    const [loading , setLoading] = useState(false);
+    //const [newOrder,setNewOrder] = useState({})
 
 
     const uploadOrder = (link) => {
-        let newOrder = {
+        let newOrder={
             buyer:userData,
             items:itemsInCart,
             date: firebase.firestore.Timestamp.fromDate(new Date()),
@@ -66,27 +68,35 @@ export const OrderContextProvider = ({children})=>{
     }
 
     const getOrders = () =>{
+        setLoading(true)
         let getDb = getFireStore();
         let ordersDb = getDb.collection("orders")
         ordersDb.get()
             .then((querySnapshot)=>{
                 querySnapshot.size === 0 && console.log("No results");
-
+                
                 let arrayOrders = querySnapshot.docs.map((doc)=>{
                     return(
                         {id: doc.id,
                         ...doc.data()}
                     )
                 })
-                setOrdersSended(arrayOrders)
+                //el siguiente if sirve para evitar el bucle en el useEffect de Order.js linea14
+                if(querySnapshot.size !== 0 && arrayOrders.length!==ordersSended.length){
+                 setOrdersSended(arrayOrders)}
+                console.log("Getting orders from the DB ")
+            
             })
             .catch(err=>console.log('An error ocurred: '+err))
+            .finally(setTimeout(() => {
+                setLoading(false)
+            }, 600))
 
         return(ordersSended)
     }
 
     return(
-        <OrderContext.Provider value={{ordersSended ,  userData , uploadOrder , updateStock , getOrders}}>
+        <OrderContext.Provider value={{loading, ordersSended , userData , uploadOrder , updateStock , getOrders}}>
             {children}
         </OrderContext.Provider>
         )

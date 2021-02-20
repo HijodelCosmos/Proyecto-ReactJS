@@ -5,6 +5,7 @@
 }
 #navBar--title{
     font-size: 3rem;
+    text-shadow: 4px 4px 4px #000000;
 }
 
 #navBar--menu{
