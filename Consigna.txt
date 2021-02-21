@@ -1,0 +1,12 @@
+
+
+Por Agregar:
+    vision de orden en tramite
+    form user
+    Markdowns
+    .env
+
+Manejar stocks (ver clase firebase II min: 1:58:00)cart linea 44 (por ahora si no busca dentro de updateStock)
+
+Tips
+    CONTROL F2 MULTICURSOR

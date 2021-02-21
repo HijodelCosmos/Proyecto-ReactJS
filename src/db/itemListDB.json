@@ -1,30 +1,45 @@
 
-{
-    "item1":
-        {"id":0,
-        "title":"Elixir Vitalis",
-        "category":"Potion",
-        "description":"Lorem Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "stock":23,
-        "price":24,
-        "src":"https://www.kindpng.com/picc/m/748-7482560_potion-pixel-art-animation-hd-png-download.png"
-        },
-    "item2":
-        {"id":1,
-        "title":"Lighting Maker",
-        "category":"Staff",
-        "description":"Lorem ipsum dolor sit amet,consectetur adipiscing elit.",
-        "stock":3,
-        "price":321,
-        "src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxHk3bC2plXKxM9Fg64y_SvhRs_SUE-QLo_A&usqp=CAU"
-        },
-    "item3":
-        {"id":2,
-            "title":"Invisibility Cloak",
-        "category":"Cloak",
-        "description":"Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "stock":2,
-        "price":754,
-        "src":"https://www.kindpng.com/picc/m/486-4867002_transparent-robe-png-wizard-pixel-art-png-download.png"
-        } 
-}
+[       
+    {"id":0,
+    "title":"Raising Skull",
+    "category":"Staff",
+    "description":"Lorem Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "stock":4,
+    "price":4684,
+    "src":"https://www.pikpng.com/pngl/m/20-206122_skull-staff-minecraft-fire-sword-pixel-art-clipart.png"
+    },
+    {"id":1,
+    "title":"Warlock Poison Staff",
+    "category":"Staff",
+    "description":"Lorem ipsum dolor sit amet,consectetur adipiscing elit.",
+    "stock":2,
+    "price":868,
+    "src":"https://www.pinclipart.com/picdir/middle/460-4603973_warlock-staff-boy-pixel-art-clipart.png"
+    },
+    {"id":2,
+    "title":"Tempest Staff",
+    "category":"Staff",
+    "description":"Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "stock":12,
+    "price":1334,
+    "src":"https://www.pngkit.com/png/detail/133-1335287_terraria-tempest-staff-minecraft-skin-magic-staff.png"
+    },
+    {"id":3,
+    "title":"Seas Storm",
+    "category":"Staff",
+    "description":"Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "stock":5,
+    "price":3487,
+    "src":"https://www.seekpng.com/png/detail/331-3316340_gear-moses-staff-of-seas-render-unison-league.png"
+    },
+    {"id":4,
+    "title":"Shadow Beam",
+    "category":"Staff",
+    "description":"Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "stock":42,
+    "price":975,
+    "src":"https://art.pixilart.com/c2af2f344dd4179.png"
+    }
+    
+
+]

@@ -3,7 +3,7 @@ import { getFireStore } from "../firebase/index";
 import firebase from "firebase/app";
 import "@firebase/firestore";
 import { CartContext } from "./cartContext";
-//import { getFireStore } from '../../firebase/index';
+
 
 export const OrderContext = React.createContext()
 
@@ -14,7 +14,7 @@ export const OrderContextProvider = ({children})=>{
     const [userData ] = useState({userName:"Comprador",phone:32154896,email:"compratuti@elmail"});
     const [ordersSended , setOrdersSended] = useState([]);
     const [loading , setLoading] = useState(false);
-    //const [newOrder,setNewOrder] = useState({})
+
 
 
     const uploadOrder = (link) => {

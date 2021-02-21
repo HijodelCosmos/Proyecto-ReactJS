@@ -3,11 +3,13 @@ import ItemCard from './itemCard';
 
 
 
-const ItemList = ({data})=>{
-
+const ItemList = ({data , loading})=>{
+    if(loading){
+        return <div></div>
+    }
 
     return(
-        <div className="card-deck justify-content-around">
+        <div className="d-flex flex-wrap justify-content-around">
             {data && data.map((item,i)=>{
                     return(
                         <ItemCard key={i} itemData={item}/>)
