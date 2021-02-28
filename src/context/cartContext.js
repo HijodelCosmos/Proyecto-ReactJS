@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 
-//por ahora
-import dataJson from '../db/itemListDB.json'
-import { getFireStore } from "../firebase/index";
-
 export const CartContext = React.createContext()
 
 
@@ -70,31 +66,9 @@ export const CartContextProvider = ({children})=>{
         setItemsInCart([])
         console.log("El carrito vaciado exitosamente")
     }
-    
-    //>>>Subir json a firestore<<<<
-    const subirJson = ()=>{
-        let getDb = getFireStore();
-        dataJson.forEach(function(obj) {
-            getDb.collection("items").add({
-                title: obj.title,
-                description: obj.description,
-                price: obj.price,
-                stock: obj.stock,
-                src: obj.src,
-                category: obj.category
-            }).then(function(docRef) {
-                
-                console.log("Document written with ID: ", docRef.id);
-            })
-            .catch(function(error) {
-                console.error("Error adding document: ", error);
-            });
-        });
-
-    }
 
     return(
-        <CartContext.Provider value={{subirJson ,count , itemsInCart, totalPrice , addItem , isInCart , removeItem , clearCart}}>
+        <CartContext.Provider value={{count , itemsInCart, totalPrice , addItem , isInCart , removeItem , clearCart}}>
             {children}
         </CartContext.Provider>
     )

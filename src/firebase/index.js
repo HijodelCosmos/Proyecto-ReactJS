@@ -1,13 +1,20 @@
 import firebase from 'firebase/app'
 import '@firebase/firestore'
 
+const firebaseApiKey= process.env.REACT_APP_FIREBASE_KEY;
+const firebaseAuthDomain = process.env.REACT_APP_FIREBASE_DOMAIN;
+const firebaseProjectId = process.env.REACT_APP_FIREBASE_PROYECT_ID;
+const firebaseStorageBucket = process.env.REACT_APP_FIREBASE_STORAGE;
+const fireabaseMessaging = process.env.REACT_APP_FIREBASE_MESSAGING_SENDER;
+const firebaseApiId = process.env.REACT_APP_FIREBASE_API_ID;
+
 const app = firebase.initializeApp({
-    apiKey: "AIzaSyDw-rnDZnHzVsB8iT6PKy3VBPDjmGyF8p8",
-    authDomain: "the-tent--react-proyect.firebaseapp.com",
-    projectId: "the-tent--react-proyect",
-    storageBucket: "the-tent--react-proyect.appspot.com",
-    messagingSenderId: "1083262875967",
-    appId: "1:1083262875967:web:44b945ebd514f67f97fb8a"
+    apiKey: firebaseApiKey,
+    authDomain: firebaseAuthDomain,
+    projectId: firebaseProjectId,
+    storageBucket: firebaseStorageBucket,
+    messagingSenderId: fireabaseMessaging,
+    appId: firebaseApiId
 })
 
 export const getFirebase=()=>{
